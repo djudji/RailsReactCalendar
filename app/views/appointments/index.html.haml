@@ -1,10 +1,13 @@
-%h1 React Calendar
+%h1.title React Calendar
 
-%h2 Appointments
+%h2.sub-title.text-center Appointments
 
-%h4 Make a new appointment
+.row.flex-centered
+  #new-appt
+    %h5 Make a new appointment
+    %p
+      = render 'new', appointment: Appointment.new
 
-= render 'new', appointment: Appointment.new
-
-#appointments
-  = render 'appointments'
+.row.flex-centered
+  #appointments
+    = render 'appointments'
