@@ -26,5 +26,6 @@ group :development do
   gem 'web-console', '>= 3.3.0'
 end
 
+gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'haml'
 gem 'react-rails'
