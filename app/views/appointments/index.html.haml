@@ -3,11 +3,5 @@
 %h2.sub-title.text-center Appointments
 
 .row.flex-centered
-  #new-appt
-    %h5 Make a new appointment
-    %p
-      = render 'new', appointment: Appointment.new
-
-.row.flex-centered
   #appointments
     = react_component 'Appointments', appointments: @appointments
