@@ -5,8 +5,10 @@ class AppointmentsController < ApplicationController
 
   def create
     @appointment = Appointment.new(appointment_params)
-    respond_to do |format|
-      format.js { render :index unless @appointment.save }
+    if @appointment.save
+      render json: @appointment
+    else
+      render json: @appointment.errors, status: :unprocessable_entity
     end
   end
 
