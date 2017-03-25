@@ -3,7 +3,7 @@ var Appointment = React.createClass({
     return(
       <div>
         <h4>{this.props.appointment.title}</h4>
-        <p>{moment(this.props.appointment.appt_time).format("DD MMMM YYYY, hh:mm")}</p>
+        <p>{formatDate(this.props.appointment.appt_time)}</p>
       </div>
     )
   }
