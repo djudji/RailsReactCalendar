@@ -1,7 +1,7 @@
 class AppointmentForm extends React.Component {
   handleChange(e) {
     const name = e.target.name;
-    obj = {};
+    const obj = {};
     obj[name] = e.target.value;
     this.props.onUserInput(obj);
   }
