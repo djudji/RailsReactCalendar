@@ -32,5 +32,5 @@ end
 
 gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'haml'
-gem 'react-rails'
+gem 'react_on_rails', '~> 6'
 gem 'tether-rails'
