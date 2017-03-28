@@ -1,6 +1,10 @@
-class Appointments extends React.Component{
+import React from "react";
+// import AppointmentForm from "./appointment_form";
+import { AppointmentsList } from "./appointments_list";
+// import update from "immutability-helper";
 
-  constructor(props) {
+export default class Appointments extends React.Component{
+  constructor(props, railsContext) {
     super(props);
     this.state = {
       appointments: this.props.appointments,
@@ -33,9 +37,7 @@ class Appointments extends React.Component{
   render() {
     return(
       <div>
-        <AppointmentForm input_title = { this.state.title } appt_time = { this.state.appt_time }
-                         onUserInput = { (obj) => this.handleUserInput(obj) }
-                         onFormSubmit = { () => this.handleFormSubmit() } />
+        
         <AppointmentsList appointments = { this.state.appointments } />
       </div>
     )
