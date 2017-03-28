@@ -1,4 +1,7 @@
-class AppointmentForm extends React.Component {
+import React from "react";
+import Datetime from "react-datetime";
+
+export default class AppointmentForm extends React.Component {
   handleChange(e) {
     const name = e.target.name;
     const obj = {};
@@ -29,7 +32,7 @@ class AppointmentForm extends React.Component {
         <form className="form" onSubmit = { (e) => this.handleSubmit(e) }>
           <input name="title" className="form-control"
                  value={this.props.input_title} onChange={ (e) => this.handleChange(e) } />
-          <Label label="Choose date and time" />
+          
           <Datetime input={false} open={true} inputProps={inputProps} value={this.props.appt_time}
                     onChange={ (e) => this.setApptTime(e) } />
           <input type="submit" value="Make Appointment" className="btn btn-primary" />
