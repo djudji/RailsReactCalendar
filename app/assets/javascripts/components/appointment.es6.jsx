@@ -1,8 +1,8 @@
-const Appointment = (props) => {
+const Appointment = ({appointment}) => {
   return (
     <div>
-      <h4>{props.appointment.title}</h4>
-      <p>{formatDate(props.appointment.appt_time)}</p>
+      <h4>{appointment.title}</h4>
+      <p>{formatDate(appointment.appt_time)}</p>
     </div>
   )
 }
