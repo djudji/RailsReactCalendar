@@ -14,15 +14,15 @@ class Appointments extends React.Component{
   }
 
   handleFormSubmit() {
-    let appointment = {title: this.state.title, appt_time: this.state.appt_time};
+    const appointment = {title: this.state.title, appt_time: this.state.appt_time};
     $.post("/appointments",
-           {appointment: appointment}).done(function(data){
+           {appointment: appointment}).done((data) => {
             this.addNewAppointment(data);
-           }.bind(this));
+           });
   }
 
   addNewAppointment(appointment) {
-    let appointments = React.addons.update(this.state.appointments, { $push: [appointment] });
+    const appointments = React.addons.update(this.state.appointments, { $push: [appointment] });
     this.setState({
       appointments: appointments.sort(function(a,b){
         return new Date(a.appt_time) - new Date(b.appt_time);
@@ -34,8 +34,8 @@ class Appointments extends React.Component{
     return(
       <div>
         <AppointmentForm input_title = { this.state.title } appt_time = { this.state.appt_time }
-                         onUserInput = { this.handleUserInput.bind(this) }
-                         onFormSubmit = { this.handleFormSubmit.bind(this) } />
+                         onUserInput = { (obj) => this.handleUserInput(obj) }
+                         onFormSubmit = { () => this.handleFormSubmit() } />
         <AppointmentsList appointments = { this.state.appointments } />
       </div>
     )
