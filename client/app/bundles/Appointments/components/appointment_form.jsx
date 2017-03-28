@@ -1,5 +1,6 @@
 import React from "react";
 import Datetime from "react-datetime";
+import Label from "./label"
 
 export default class AppointmentForm extends React.Component {
   handleChange(e) {
@@ -32,7 +33,7 @@ export default class AppointmentForm extends React.Component {
         <form className="form" onSubmit = { (e) => this.handleSubmit(e) }>
           <input name="title" className="form-control"
                  value={this.props.input_title} onChange={ (e) => this.handleChange(e) } />
-          
+          <Label label="Choose date and time" />
           <Datetime input={false} open={true} inputProps={inputProps} value={this.props.appt_time}
                     onChange={ (e) => this.setApptTime(e) } />
           <input type="submit" value="Make Appointment" className="btn btn-primary" />
