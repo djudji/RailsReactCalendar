@@ -29,6 +29,7 @@ var AppointmentForm = React.createClass({
         <form className="form" onSubmit = { this.handleSubmit }>
           <input name="title" className="form-control"
                  value={this.props.input_title} onChange={this.handleChange} />
+          <Label label="Choose date and time" />
           <Datetime input={false} open={true} inputProps={inputProps} value={this.props.appt_time} onChange={this.setApptTime} />
           <input type="submit" value="Make Appointment" className="btn btn-primary" />
         </form>
