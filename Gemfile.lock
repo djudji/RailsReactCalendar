@@ -120,7 +120,7 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
-    react_on_rails (6.9.1)
+    react_on_rails (6.9.2)
       addressable
       connection_pool
       execjs (~> 2.5)
