@@ -2,6 +2,8 @@
 
 A simple Calendar App with managing appointments functionality.
 
+This app is on Heroku! Check it out -> [React on Rails Calendar]
+
 Technologies used:
 
 * Rails 5
@@ -26,3 +28,4 @@ In terminal add nodejs buildpack at first position:
 [react-rails]: https://github.com/reactjs/react-rails
 [react_on_rails]: https://github.com/shakacode/react_on_rails
 [heroku guide for installing binaries]: https://devcenter.heroku.com/articles/ruby-support#installed-binaries
+[React on Rails Calendar]: https://calendar-react-on-rails.herokuapp.com/
